@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Law Office of Lopez & Associates</title>
+  <!-- Professional + pop: classic navy + muted gold; symmetric 2×2 grid; subtle motion -->
+  <style>
+    :root {
+      --navy:#14213d;    /* deep professional */
+      --gold:#e9c46a;    /* muted pop */
+      --cream:#f6f5f3;   /* warm background */
+      --ink:#1b1b1b;     /* body text */
+      --slate:#667085;   /* secondary text */
+      --card:#ffffff;    /* cards */
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family: "Georgia", serif; color:var(--ink); background:var(--cream); line-height:1.6}
+
+    /* Header / Nav */
+    .topbar{background:var(--navy); color:#fff}
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .brand .logo{width:40px; height:40px; border-radius:8px; background:linear-gradient(135deg,var(--gold),#f1deb1); display:inline-block}
+    .brand h1{font-size:1.1rem; letter-spacing:.3px}
+    .nav a{color:#fff; text-decoration:none; margin-left:18px; font-size:.95rem; position:relative}
+    .nav a:after{content:""; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:var(--gold); transition:width .25s ease}
+    .nav a:hover:after{width:100%}
+
+    /* Hero */
+    .hero{background:radial-gradient(80% 120% at 80% 20%, rgba(233,196,106,.16), transparent 60%), linear-gradient(180deg, #152443 0%, #0e1a34 100%); color:#fff;}
+    .hero-wrap{display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center; padding:56px 0}
+    .eyebrow{color:var(--gold); text-transform:uppercase; letter-spacing:.12em; font-size:.8rem}
+    .hero h2{font-size:2.15rem; line-height:1.2; margin:.5rem 0 1rem}
+    .hero p{color:#e6e8ef; max-width:48ch}
+    .cta{margin-top:18px; display:inline-flex; align-items:center; gap:10px; background:var(--gold); color:#1e1e1e; padding:12px 18px; border-radius:8px; text-decoration:none; font-weight:700}
+    .cta:hover{filter:saturate(1.05) brightness(1.02)}
+    .hero-card{background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.18); border-radius:14px; padding:18px}
+    .hero-list{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:8px}
+    .chip{background:rgba(233,196,106,.18); color:#fff; padding:10px 12px; border-radius:100px; font-size:.9rem; text-align:center}
+
+    /* Section titles */
+    .section{padding:56px 0}
+    .section h3{font-size:1.6rem; margin-bottom:14px}
+    .muted{color:var(--slate)}
+
+    /* Symmetric 2×2 Practice Grid */
+    .grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:22px}
+    .card{background:var(--card); border-radius:14px; padding:22px; box-shadow:0 6px 20px rgba(17,24,39,.08); border:1px solid #ececec}
+    .card h5{font-size:1.15rem; margin-bottom:8px}
+    .card p{color:#4b5563}
+    .badge{display:inline-block; background:var(--gold); color:#1f2937; font-weight:700; padding:6px 12px; border-radius:999px; font-size:.95rem; margin-bottom:10px}
+    .card:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(17,24,39,.12); transition:all .22s ease}
+
+    /* Trust band */
+    .trust{background:#ffffff; border-top:1px solid #ececec; border-bottom:1px solid #ececec}
+    .trust-wrap{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; text-align:center}
+    .trust-item{padding:16px}
+    .trust-item strong{font-size:1.1rem; color:var(--navy)}
+
+    /* Contact */
+    .contact{background:linear-gradient(180deg,#ffffff 0%, #faf9f7 100%); border:1px solid #ececec; border-radius:14px; padding:24px}
+    .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+    .contact .lead{font-size:1.05rem}
+    .btn-secondary{display:inline-block; background:#ffffff; border:2px solid var(--navy); color:var(--navy); padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:700}
+    .btn-secondary:hover{background:var(--navy); color:#fff}
+
+    footer{background:var(--navy); color:#cbd5e1; padding:22px 0; font-size:.95rem}
+
+    @media (max-width: 900px){
+      .hero-wrap{grid-template-columns:1fr; text-align:center}
+      .hero p{margin:0 auto}
+      .hero-list{grid-template-columns:1fr 1fr}
+      .grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .trust-wrap{grid-template-columns:1fr}
+      .nav{flex-wrap:wrap; gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <h1>Law Office of Lopez &amp; Associates</h1>
+      </div>
+      <nav>
+        <a href="#practice">Practice Areas</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <div class="eyebrow">Illinois • Bilingual • Since 1998</div>
+        <h2>Experienced Legal Representation with Integrity &amp; Results</h2>
+        <p>Criminal &amp; Traffic Defense • Immigration • Real Estate • Family Law. Serving Chicagoland with client-first advocacy and clear communication.</p>
+        <a class="cta" href="#contact">Schedule a Consultation →</a>
+      </div>
+      <aside class="hero-card">
+        <div class="muted">Practice Focus</div>
+        <div class="hero-list">
+          <div class="chip">Criminal / DUI</div>
+          <div class="chip">Immigration</div>
+          <div class="chip">Real Estate</div>
+          <div class="chip">Family Law</div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="practice" class="section">
+      <h3>Practice Areas</h3>
+      <p class="muted">Clear, focused services — organized symmetrically so clients find what they need instantly.</p>
+      <div class="grid" style="margin-top:18px">
+        <article class="card">
+          <span class="badge">Criminal, Traffic &amp; DUI</span>
+          <h5>Defense &amp; Protection</h5>
+          <p>Comprehensive representation for misdemeanors and felonies, DUI, traffic citations, and license issues. Strategy from arraignment to resolution.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Immigration</span>
+          <h5>Family &amp; Individual Matters</h5>
+          <p>Visas, green cards, citizenship, waivers, and removal defense. Bilingual support with a focus on clear next steps.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Real Estate</span>
+          <h5>Transactions &amp; Closings</h5>
+          <p>Residential and commercial closings, title review, and landlord–tenant guidance with practical, timely counsel.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Family Law</span>
+          <h5>Stability for Families</h5>
+          <p>Divorce, allocation of parental responsibilities, parenting time, and support — handled with discretion and care.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About (Expanded) -->
+    <section id="about-firm" class="section">
+      <h3>About Our Firm</h3>
+      <div class="contact" style="margin-top:8px">
+        <p>The Law Office of Lopez &amp; Affiliates, Ltd., has been serving the Bensenville, Chicago and Elgin area since 1998. Our mission and philosophy is simple; we are a neighborhood law office dedicated to providing quality legal access to the community. We firmly believe that competent legal advocacy should not be a privilege for the few but a right for all. We want our communities to know that should it ever become necessary to seek out legal advice or assistance, do not hesitate to call us. If we cannot help you with your problem we will find someone who will and who shares in our philosophy.</p>
+        <p style="margin-top:10px">Salvador Lopez Esq. is the founder of the law firm, which has guided the firm from day one. He received his B.A. in Philosophy in 1995 and his J.D. in 1998. Once licensed to practice law in Illinois, he quickly realized that the Latino community had grown much since he was a child and were badly advised in the aspect of legal representation. Then he expanded his practice from Elgin to Chicago, and then to Bensenville. Salvador’s firm has extensive experience in traffic, criminal, divorce, immigration and real estate cases. He has personally conducted many trials, obtained legal status for immigrants and has been involved in many real estate closings. He and his staff are bilingual and speak English and Spanish fluently. Salvador is licensed to practice law in Illinois and court of Northern District in Illinois.</p>
+        <p style="margin-top:10px">Taking complete advantage of its attorney's individual skills and talents, the Law Office of Lopez &amp; Affiliates Ltd. provides legal services to its clients efficiently, economically, and effectively. To arrange an appointment, call <strong>312.437.7800</strong> or contact us online.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section trust">
+      <div class="container trust-wrap">
+        <div class="trust-item">
+          <strong>20+ Years</strong>
+          <div class="muted">Serving Chicagoland</div>
+        </div>
+        <div class="trust-item">
+          <strong>Bilingual Counsel</strong>
+          <div class="muted">English • Español</div>
+        </div>
+        <div class="trust-item">
+          <strong>Client‑First</strong>
+          <div class="muted">Clear Communication</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>Contact</h3>
+      <div class="contact">
+        <div class="contact-grid">
+          <div>
+            <p class="lead">Call <strong>(630) 555‑1234</strong> or email <a href="mailto:info@lawlopez.me">info@lawlopez.me</a>.</p>
+            <p class="muted">Office: 123 Main St, Bensenville, IL 60106</p>
+            <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap">
+              <a class="btn-secondary" href="#">Client Intake Form</a>
+              <a class="btn-secondary" href="#">Directions</a>
+            </div>
+          </div>
+          <div>
+            <p class="muted">Prefer a quick message? Use our intake form to share the basics and we’ll reach out the same business day.</p>
+            <ul class="muted" style="margin-top:8px; padding-left:18px; list-style:disc">
+              <li>Same‑day responses during business hours</li>
+              <li>Remote and in‑person consultations</li>
+              <li>Se habla español</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Law Office of Lopez &amp; Associates Ltd. All rights reserved.</div>
+  </footer>
+</body>
+</html>
+

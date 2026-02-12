@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Law — Law Office of Lopez & Associates</title>
+  <style>
+    :root{--navy:#14213d;--gold:#e9c46a;--cream:#f6f5f3;--ink:#1b1b1b;--slate:#667085;--card:#ffffff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Georgia",serif;background:var(--cream);color:var(--ink);line-height:1.6}
+    a{color:inherit}
+
+    /* Topbar / Nav */
+    .topbar{background:var(--navy);color:#fff}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--gold),#f1deb1)}
+    .brand h1{font-size:1.1rem;letter-spacing:.3px}
+    .links a{color:#fff;text-decoration:none;margin-left:18px;position:relative}
+    .links a:after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--gold);transition:width .25s}
+    .links a:hover:after{width:100%}
+
+    /* Breadcrumb */
+    .crumbs{background:#0e1a34;color:#cbd5e1}
+    .crumbs .wrap{padding:10px 0;font-size:.95rem}
+    .crumbs a{color:#cbd5e1;text-decoration:none}
+    .crumbs a:hover{color:#fff}
+
+    /* Hero */
+    .hero{background:radial-gradient(80% 120% at 80% 20%, rgba(233,196,106,.16), transparent 60%), linear-gradient(180deg, #152443 0%, #0e1a34 100%);color:#fff}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;padding:56px 0}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+    .hero h2{font-size:2.15rem;line-height:1.2;margin:.5rem 0 1rem}
+    .hero p{color:#e6e8ef;max-width:52ch}
+    .cta{margin-top:18px;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#1e1e1e;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:700}
+
+    /* Aside card (dark with gold border) */
+    .hero aside.card{background:rgba(20,33,61,0.85);color:#f1f1f1;border:1px solid var(--gold);border-radius:14px;padding:22px}
+    .hero aside.card .badge{background:var(--gold);color:#1f2937;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.95rem;margin-bottom:10px;display:inline-block}
+
+    /* Section */
+    .section{padding:48px 0}
+    h3{font-size:1.6rem;margin-bottom:12px}
+    .muted{color:var(--slate)}
+
+    /* Cards / Grid */
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .card{background:var(--card);border:1px solid #ececec;border-radius:14px;box-shadow:0 6px 20px rgba(17,24,39,.08);padding:22px}
+    .badge{display:inline-block;background:var(--gold);color:#1f2937;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.95rem;margin-bottom:10px}
+    .card h5{font-size:1.05rem;margin:.3rem 0 .4rem}
+
+    /* Process */
+    .steps{counter-reset:step}
+    .step{display:flex;gap:14px;align-items:flex-start;margin:12px 0}
+    .step:before{counter-increment:step;content:counter(step);flex:none;width:34px;height:34px;border-radius:999px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700}
+
+    /* FAQ */
+    details{background:#fff;border:1px solid #ececec;border-radius:10px;padding:14px;margin:10px 0}
+    summary{cursor:pointer;font-weight:700}
+
+    /* Contact band */
+    .contact{background:linear-gradient(180deg,#ffffff 0%, #faf9f7 100%);border:1px solid #ececec;border-radius:14px;padding:24px}
+
+    footer{background:var(--navy);color:#cbd5e1;padding:22px 0;font-size:.95rem;margin-top:28px}
+
+    @media(max-width:900px){
+      .hero .wrap{grid-template-columns:1fr;text-align:center}
+      .hero p{margin:0 auto}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <div class="container nav">
+      <div class="brand"><span class="logo" aria-hidden="true"></span><h1>Law Office of Lopez &amp; Associates</h1></div>
+      <div class="links">
+        <a href="./index.html">Home</a>
+        <a href="./immigration.html">Immigration</a>
+        <a href="./criminal-traffic-dui.html">Criminal • Traffic • DUI</a>
+        <a href="./real-estate.html">Real Estate</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="crumbs">
+    <div class="container wrap">
+      <a href="./index.html">Home</a> ▸ <strong>Family Law</strong>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container wrap">
+      <div>
+        <div class="eyebrow">Divorce • Custody • Support</div>
+        <h2>Clear Guidance for Families Through Complex Changes</h2>
+        <p>We provide practical, steady counsel for divorce, allocation of parental responsibilities, parenting time, child support, and protective orders. Bilingual representation available.</p>
+        <a class="cta" href="#contact">Schedule a Consultation →</a>
+      </div>
+      <aside class="card">
+        <span class="badge">Se habla español</span>
+        <p class="muted" style="color:#e6e8ef">Atendemos asuntos de familia con discreción y claridad. Llámenos para revisar su situación.</p>
+      </aside>
+    </div>
+  </header>
+
+  <!-- Overview -->
+  <main class="container">
+    <section class="section" id="overview">
+      <h3>Overview</h3>
+      <p class="muted">Family law matters are personal and often urgent. We focus on reducing friction, protecting children’s interests, and reaching durable agreements, whether by negotiation or in court.</p>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <h3>Services</h3>
+      <div class="grid" style="margin-top:12px">
+        <article class="card">
+          <span class="badge">Divorce</span>
+          <h5>Dissolution & Agreements</h5>
+          <p>Contested and uncontested divorce, marital settlement agreements, and equitable division guidance.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Custody</span>
+          <h5>Allocation of Parental Responsibilities</h5>
+          <p>Decision‑making, parenting plans, school and medical choices, and dispute resolution mechanisms.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Parenting Time</span>
+          <h5>Schedules & Modifications</h5>
+          <p>Regular, holiday, and vacation schedules; enforcement and changes when circumstances shift.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Child Support</span>
+          <h5>Calculation & Enforcement</h5>
+          <p>Guideline reviews, deviation factors, arrears, and wage withholding orders.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Orders of Protection</span>
+          <h5>Safety & Stability</h5>
+          <p>Emergency and plenary orders; safety planning and court representation.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Mediation</span>
+          <h5>Negotiation First</h5>
+          <p>Structured sessions aimed at resolving key issues efficiently before litigation.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <h3>Our Approach</h3>
+      <div class="card">
+        <div class="steps">
+          <div class="step"><div></div><div><strong>1. Listening</strong><br/><span class="muted">We understand goals, history, and immediate concerns to tailor a plan.</span></div></div>
+          <div class="step"><div></div><div><strong>2. Strategy</strong><br/><span class="muted">We map options — negotiation, mediation, or litigation — based on priorities and timelines.</span></div></div>
+          <div class="step"><div></div><div><strong>3. Action</strong><br/><span class="muted">We draft filings, negotiate terms, and represent you in court when necessary.</span></div></div>
+          <div class="step"><div></div><div><strong>4. Resolution</strong><br/><span class="muted">Finalize agreements and orders with clear next steps and compliance guidance.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section" id="faq">
+      <h3>FAQs</h3>
+      <details>
+        <summary>How long does an uncontested divorce take?</summary>
+        <p class="muted">Timelines vary by county and docket. With full agreement and complete documents, many cases can finalize in a few weeks.</p>
+      </details>
+      <details>
+        <summary>Can parenting time be changed later?</summary>
+        <p class="muted">Yes, courts may modify schedules based on significant changes in circumstances or best interests of the child.</p>
+      </details>
+      <details>
+        <summary>Do you offer payment plans?</summary>
+        <p class="muted">We can discuss structured payments depending on case type. Ask during your consultation.</p>
+      </details>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section" id="contact">
+      <h3>Contact</h3>
+      <div class="contact">
+        <p class="muted">Call <strong>(312) 437‑7800</strong> or email <a href="mailto:info@lawlopez.me">info@lawlopez.me</a>. We’ll outline your options and next steps in your first meeting.</p>
+        <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="cta" href="#">Schedule Consultation</a>
+          <a class="cta" href="./index.html" style="background:#fff;border:2px solid var(--navy);color:var(--navy)">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Law Office of Lopez &amp; Associates Ltd. All rights reserved.</div>
+  </footer>
+</body>
+</html>

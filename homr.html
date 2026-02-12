@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Law Office of Lopez & Associates — Home</title>
+  <style>
+    :root { --navy:#14213d; --gold:#e9c46a; --cream:#f6f5f3; --ink:#1b1b1b; --slate:#667085; --card:#ffffff; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Georgia",serif;background:var(--cream);color:var(--ink);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+
+    /* NAVIGATION */
+    .topbar{background:var(--navy);color:#fff}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--gold),#f1deb1)}
+    .brand h1{font-size:1.1rem;letter-spacing:.3px}
+    .links a{color:#fff;margin-left:18px;position:relative;font-size:.95rem}
+    .links a:after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--gold);transition:width .25s}
+    .links a:hover:after{width:100%}
+
+    /* HERO */
+    .hero{background:radial-gradient(80% 120% at 80% 20%, rgba(233,196,106,.16), transparent 60%), linear-gradient(180deg, #152443 0%, #0e1a34 100%);color:#fff}
+    .hero-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;padding:56px 0}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+    .hero h2{font-size:2.15rem;line-height:1.2;margin:.5rem 0 1rem}
+    .hero p{color:#e6e8ef;max-width:48ch}
+    .cta{margin-top:18px;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#1e1e1e;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:700}
+
+    .hero-card{background:rgba(20,33,61,0.85);color:#f1f1f1;border:1px solid var(--gold);border-radius:14px;padding:22px}
+    .hero-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+    .chip{background:rgba(233,196,106,.18);color:#fff;padding:10px 12px;border-radius:100px;font-size:.9rem;text-align:center}
+
+    /* SECTIONS */
+    .section{padding:56px 0}
+    h3{font-size:1.6rem;margin-bottom:14px}
+    .muted{color:var(--slate)}
+
+    /* CARDS */
+    .grid{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:22px}
+    .card{background:var(--card);border-radius:14px;padding:22px;box-shadow:0 6px 20px rgba(17,24,39,.08);border:1px solid #ececec}
+    .badge{display:inline-block;background:var(--gold);color:#1f2937;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.95rem;margin-bottom:10px}
+    .card h5{font-size:1.05rem;margin:.3rem 0 .4rem}
+    .btn-secondary{display:inline-block;background:#ffffff;border:2px solid var(--navy);color:var(--navy);padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;transition:all .3s}
+    .btn-secondary:hover{background:var(--gold);color:#1f1f1f;box-shadow:0 0 10px var(--gold)}
+
+    /* TRUST / CONTACT */
+    .trust{background:#ffffff;border-top:1px solid #ececec;border-bottom:1px solid #ececec}
+    .trust-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}
+    .trust-item{padding:16px}
+    .trust-item strong{font-size:1.1rem;color:var(--navy)}
+
+    .contact{background:linear-gradient(180deg,#ffffff 0%, #faf9f7 100%);border:1px solid #ececec;border-radius:14px;padding:24px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+    footer{background:var(--navy);color:#cbd5e1;padding:22px 0;font-size:.95rem}
+
+    @media (max-width: 900px){
+      .hero-wrap{grid-template-columns:1fr;text-align:center}
+      .hero p{margin:0 auto}
+      .grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .trust-wrap{grid-template-columns:1fr}
+      .nav{flex-wrap:wrap;gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <h1>Law Office of Lopez &amp; Associates</h1>
+      </div>
+      <div class="links">
+        <a href="#practice">Practice Areas</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="Immigration.html">Immigration</a>
+        <a href="defense.html">Criminal • Traffic • DUI</a>
+        <a href="realEstate.html">Real Estate</a>
+        <a href="familyLaw.html">Family Law</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <div class="eyebrow">Illinois • Bilingual • Since 1998</div>
+        <h2>Experienced Legal Representation with Integrity &amp; Results</h2>
+        <p>Criminal &amp; Traffic Defense • Immigration • Real Estate • Family Law. Serving Chicagoland with client-first advocacy and clear communication.</p>
+        <a class="cta" href="#contact">Schedule a Consultation →</a>
+      </div>
+      <aside class="hero-card">
+        <div class="muted">Practice Focus</div>
+        <div class="hero-list">
+          <div class="chip">Criminal / DUI</div>
+          <div class="chip">Immigration</div>
+          <div class="chip">Real Estate</div>
+          <div class="chip">Family Law</div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="practice" class="section">
+      <h3>Practice Areas</h3>
+      <p class="muted">Clear, focused services — organized symmetrically so clients find what they need instantly.</p>
+      <div class="grid" style="margin-top:18px">
+        <article class="card">
+          <span class="badge">Criminal, Traffic &amp; DUI</span>
+          <h5>Defense &amp; Protection</h5>
+          <p>Comprehensive representation for misdemeanors and felonies, DUI, traffic citations, and license issues. Strategy from arraignment to resolution.</p>
+          <div style="margin-top:10px"><a class="btn-secondary" href="defense.html">Learn more →</a></div>
+        </article>
+        <article class="card">
+          <span class="badge">Immigration</span>
+          <h5>Family &amp; Individual Matters</h5>
+          <p>Visas, green cards, citizenship, waivers, and removal defense. Bilingual support with a focus on clear next steps.</p>
+          <div style="margin-top:10px"><a class="btn-secondary" href="Immigration.html">Learn more →</a></div>
+        </article>
+        <article class="card">
+          <span class="badge">Real Estate</span>
+          <h5>Transactions &amp; Closings</h5>
+          <p>Residential and commercial closings, title review, and landlord–tenant guidance with practical, timely counsel.</p>
+          <div style="margin-top:10px"><a class="btn-secondary" href="realEstate.html">Learn more →</a></div>
+        </article>
+        <article class="card">
+          <span class="badge">Family Law</span>
+          <h5>Stability for Families</h5>
+          <p>Divorce, allocation of parental responsibilities, parenting time, and support — handled with discretion and care.</p>
+          <div style="margin-top:10px"><a class="btn-secondary" href="familyLaw.html">Learn more →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section trust">
+      <div class="container trust-wrap">
+        <div class="trust-item"><strong>20+ Years</strong><div class="muted">Serving Chicagoland</div></div>
+        <div class="trust-item"><strong>Bilingual Counsel</strong><div class="muted">English • Español</div></div>
+        <div class="trust-item"><strong>Client-First</strong><div class="muted">Clear Communication</div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>Contact</h3>
+      <div class="contact">
+        <div class="contact-grid">
+          <div>
+            <p class="muted">Call <strong>(312) 437-7800</strong> or email <a href="mailto:info@lawlopez.me">info@lawlopez.me</a>.</p>
+            <p class="muted">Office: 123 Main St, Bensenville, IL 60106</p>
+            <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap">
+              <a class="btn-secondary" href="#">Client Intake Form</a>
+              <a class="btn-secondary" href="#">Directions</a>
+            </div>
+          </div>
+          <div>
+            <p class="muted">Prefer a quick message? Use our intake form to share the basics and we’ll reach out the same business day.</p>
+            <ul class="muted" style="margin-top:8px; padding-left:18px; list-style:disc">
+              <li>Same-day responses during business hours</li>
+              <li>Remote and in-person consultations</li>
+              <li>Se habla español</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Law Office of Lopez &amp; Associates Ltd. All rights reserved.</div>
+  </footer>
+</body>
+</html>
